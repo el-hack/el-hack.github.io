@@ -1,168 +1,58 @@
-@import url('header.css');
-@import url('footer.css');
-header{
-    height: fit-content;
-    border-bottom: 1px solid #ccc;
+@import url("../css/header.css");
+@import url("../css/footer.css");
+body {
+  background-color: #FAFBFE;
 }
-section.section-principale{
-    margin: auto;
-    width: 90%;
-    padding-bottom: 30px;
+
+.header {
+  padding: 100px;
+  background-color: #0074FA;
 }
-/* stylisation de la section principale */
-section.section-principale .titre-principale{
-    text-align: center;
+.header .header__titre {
+  text-align: center;
+  font-size: 50px;
+  color: white;
 }
-/* stylisation de la nav centrale */
-.nav-centrale{
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+.realisations {
+  padding-top: 50px;
+  align-items: center;
+  cursor: pointer;
+  margin: auto;
+  width: 70%;
+  background-color: #FAFBFE;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-.nav-centrale ul{
-    display: flex;
-    font-size: 16px;
-    font-family: 'Fira Sans' , sans-serif;
-    margin: auto;
-    width: 62%;
+.realisations .realisation {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.2);
 }
-.nav-centrale ul a{
-    color: #777777;
+.realisations .realisation:hover {
+  animation: Monter 1s forwards;
 }
-.nav-centrale ul li:hover{
-    cursor: pointer;
-    background-color: #E84324;
-    color: white;
-    height: 100%;
+.realisations .realisation__image {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
 }
-.nav-centrale ul li:hover>a{
-    color: white;
+.realisations .realisation__image--titre {
+  padding-left: 10px;
+  word-wrap: break-word;
 }
-.nav-centrale ul li{
-    padding: 15px;
+
+@keyframes Monter {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+    box-shadow: -1px 1px 16px 4px rgba(0, 0, 0, 0.2);
+  }
 }
-.titre{
-    color: #333333;
-    font-size: 40px;
-    font-family: 'poppins' , sans-serif;
-    margin: 70px 0 10px;
-}
-.sous-titre{
-    color: #333333;
-    font-size: 18px;
-    font-family: sans-serif;
-    margin: 20px 0;
-}
-.realisations{
-    padding-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(4 , 1fr);
-    grid-gap: 20px;
-}
-.realiser{
-    border: 1px solid #ccc;
-    width: 200px;
-    height: 200px;
-    background: url('img/adamtp.png') no-repeat center cover;
-}
-.infos{
-    margin: auto;
-    width: 90%;
-    transform: translateY(50%);
-}
-.info{
-    margin: 0;
-    background-color: transparent;
-    padding: 20px;
-    color: transparent;
-    text-align: center;
-    cursor: pointer;
-}
-.infos .titre-info{
-    cursor: pointer;
-    padding: 10px;
-    background-color: transparent;
-    color: transparent;
-    margin: 0;
-    text-align: center;
-}
-.realiser:hover>.infos:hover .info{
-    background-color: #E84324;
-    transition: 0.7s;
-    color: white;
-}
-.realiser:hover>.infos:hover .titre-info{
-    color: white;
-    transition: 0.7s;
-    background-color: rgba(0, 0, 0, 0.185);
-}
-.hambeurger{
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    right: 10px;
-    display: none;
-    cursor: pointer;
-}
-.onglets ul li.active{
-    border: 2px solid #E84324;
-}
-@media screen and (max-width: 950px) {
-    .first-nav{
-        display: block;
-        height: 160px;
-        text-align: center;
-    }
-    .separateur{
-        display: none;
-    }
-    .first-nav .nav-left ul{
-        display: block;
-    }
-    .second-nav .onglets .menu{
-        display: block;
-        background-color: #fff;
-    }
-    .hambeurger .fa-bars{
-        font-size: 30px;
-    }
-    .hambeurger{
-        display: block;
-    }
-    .affiche{
-        
-    }
-    .second-nav{
-        height: 50px;
-    }
-    .nav-centrale ul{
-        display: block;
-        text-align: center;
-    }
-    .realiser{
-        width: 200px;
-        height: 200px;
-    }
-    .realisations{
-        margin: auto;
-        width: 90%;
-        display: grid;
-        grid-template-columns: repeat(3 , 1fr);
-        grid-gap: 10px;
-    }
-    .avant-footer{
-        display: block;
-        padding-left: 40px;
-    }
-}
-@media screen and (max-width : 720px ) {
-    .realisations{
-        margin: auto;
-        width: 70%;
-        grid-template-columns: repeat(2 , 1fr);
-    }
-    .realiser{
-        width: 100px;
-        height: 100px;
-    }
-}
+
+/*# sourceMappingURL=realisation.css.map */
