@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+ul{
+    margin:0;
+    padding:0;
+}
+
+/* stylisation de la première nav ( orange ) */
+.first-nav{
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-evenly;
+    background-color: #E84324;
+    width: 100%;
+    height: 50px;
+    color: white;
+}
+.separateur{
+    flex-grow: 0.5;
+}
+.first-nav .nav-left ul li{
+    padding: 20px;
+}
+.first-nav .nav-left ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+/* stylisation de la deuxième nav ( blanche ) */
+.second-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: #fff;
+    width: 100%;
+    height: 60px;
+}
+/* stylisation du logo */
+.second-nav .logo img{
+    width: 200px;
+    height: 150px;
+}
+.second-nav .logo{
+    width: 500px;
+}
+.second-nav .onglets{
+    width: 100%;
+    margin-right: 40px;
+    font-size: 20px;
+}
+.second-nav .onglets .menu{
+    display: flex;
+    justify-content: space-evenly;
+}
+.second-nav .onglets .menu li a{
+    color: black;
+}
+.second-nav .onglets .menu li{
+    border: 2px solid white;
+    padding: 16px 14px 16px 14px ;
+    border-radius: 10px;
+}
+.second-nav .onglets .menu li:hover{
+    border: 2px solid #E84324;
+}
